@@ -29,37 +29,36 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      backgroundColor: Colors.grey[850],
+
       body: Center(
         child: Container(
           width: 200,
           height: 200,
+
           decoration: BoxDecoration(
-              color: Colors.grey[300],
-              borderRadius: const BorderRadius.all(
-                Radius.circular(40),
-              ),
-              boxShadow: const [
+              color: Colors.grey[850],
+              borderRadius: const BorderRadius.all(Radius.circular(100)),
+              boxShadow: [
                 BoxShadow(
-                    color: Colors.grey,
-                    offset: Offset(5.0, 5.0),
+                    color: Colors.grey.shade900,
+                    offset: const Offset(5.0, 5.0),
                     blurRadius: 15.0,
                     spreadRadius: 1.0),
                 BoxShadow(
-                    color: Colors.white,
-                    offset: Offset(-5.0, -5.0),
+                    color: Colors.grey.shade800,
+                    offset: const Offset(-5.0, -5.0),
                     blurRadius: 15.0,
                     spreadRadius: 1.0)
               ]),
+
           child: const Icon(
-            Icons.android_outlined,
+            Icons.android,
             size: 80,
-          ),
-        ),
-      ),
+            color: Colors.white,
+          ), // BoxShadow 00410001( color: Colors.grey[800], offset: Offset( -5.0, -5.0), blurRadius: 15.0, spreadRadius: 1.0 ), // BoxShadow
+        ), // Boxbecoration
+      ), // Container ), // Center ): // Scaffold
     );
   }
 }
